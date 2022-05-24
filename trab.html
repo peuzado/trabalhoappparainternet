@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <script type="text/javascript">
+        function limite_textarea(valor) {
+            quant = 300;
+            total = valor.length;
+            if(total <= quant) {
+                resto = quant - total;
+                document.getElementById('cont').innerHTML = resto;
+            } else {
+                document.getElementById('texto').value = valor.substr(0,quant);
+            }
+        }
+    </script>
+</head>
+<body>
+    <section class="formulario login">
+        <form>
+           <p>Formulário de Login</p>
+           <label>E-mail:</label><br>
+           <input type="email" required>
+           <br><br>
+           <label>Senha:</label><br>
+           <input type="password" required minlength="8" maxlength="25" size="25"><br><br>
+           <button>Efetuar Login</button>
+           <button type="reset">Cancelar</button>
+        </form>
+    </section>
+    <section class="formulario pessoal">
+        <form>
+            <p>Formulário</p>
+            <div>
+                <p>dados pessoais</p>
+                <label>Nome:</label>
+                <input type="name"><br>
+                <label>Endereço:</label>
+                <input type="andress"><br>
+                <label>Cidade:</label>
+                <input type="city"><br>
+                <label>Estado:</label>
+                <select id="estado" name="estado">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="EX">Estrangeiro</option>
+                </select><br>
+            </div>
+            <div>
+                <p> Dados Profissionais</p>
+                <label>Natureza de Cargo</label><br>
+                <input type="radio" name="natureza_de_cargo" value="gerencia">Gerência
+                <input type="radio" name="natureza_de_cargo" value="financeiro">Financeiro
+                <input type="radio" name="natureza_de_cargo" value="recepcao">Recepção
+                <input type="radio" name="natureza_de_cargo" value="administrativo">Administrativo
+                <input type="radio" name="natureza_de_cargo" value="juridico">Jurídico
+                
+                <p>Área de interesse</p>
+                <input type="checkbox" value="computacao">Computação
+                <input type="checkbox" value="biologia">Biologia
+                <input type="checkbox" value="meioAmbiente">Meio Ambiente
+                <input type="checkbox" value="engenharia">Engenharia
+                <input type="checkbox" value="historia">História
+                <br><br>
+                <label>Mini-currículo</label><br>
+                <textarea name="curriculo" cols="30" rows="10" maxlength="300" onkeyup="limite_textarea(this.value)"></textarea><br>
+                <span id="cont">300</span> Caractéres Disponíveis<br>
+            </div>
+            <input type="submit">
+            <button type="reset">Limpar</button>
+        </form>
+    </section>
+    <section class="formulario cadastro">
+        <form>
+            <div class="detalhesPessoais">
+                <label>Nome:</label><input type="name">
+                <input type="name">
+                <input type="date">
+            </div>
+        </form>
+    </section>
+</body>
+</html>
