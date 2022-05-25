@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários</title>
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript">
         function limite_textarea(valor) {
             quant = 300;
@@ -17,6 +18,7 @@
             }
         }
     </script>
+    
 </head>
 <body>
     <section class="formulario login">
@@ -101,9 +103,24 @@
     <section class="formulario cadastro">
         <form>
             <div class="detalhesPessoais">
-                <label>Nome:</label><input type="name">
-                <input type="name">
-                <input type="date">
+                <p>Cadastro de Funcionário</p>
+                <label>Nome: </label><input type="name"><br>
+                <label>Sobrenome: </label><input type="name"><br>
+                <label>Data de nascimento: </label><input type="date"><br>
+            </div>
+            <div class="detalhesProfissionais">
+                <p>Detalhes Profissionais</p>
+                <label>Departamento: </label> 
+                <select name="departamento" id="dep">
+                    <option value="null">Não selecionado</option>
+                    <option value="RH">RH</option>
+                    <option value="TI">Informática</option>
+                    <option value="PCP">PCP</option>
+                    <option value="Controladoria">Controladoria</option>
+                    <option value="MA">Meio-Ambiente</option>
+                </select><br>
+                <label>Código Funcionário</label>
+                <input type="text">
             </div>
         </form>
     </section>
