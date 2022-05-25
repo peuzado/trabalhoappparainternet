@@ -18,10 +18,14 @@
             }
         }
     </script>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="formulario login">
+    <h1><nav id="title">FORMULÁRIOS</nav></h1>
+    <section class="principal">
+    <section class="formularios um">
         <form>
            <p>Formulário de Login</p>
            <label>E-mail:</label><br>
@@ -33,11 +37,12 @@
            <button type="reset">Cancelar</button>
         </form>
     </section>
-    <section class="formulario pessoal">
+    <section class="formularios dois">
         <form>
             <p>Formulário</p>
-            <div>
-                <p>dados pessoais</p>
+            <div class="formulario pessoal">
+            
+                <p>Dados Pessoais</p>
                 <label>Nome:</label>
                 <input type="name"><br>
                 <label>Endereço:</label>
@@ -76,39 +81,39 @@
                     <option value="EX">Estrangeiro</option>
                 </select><br>
             </div>
-            <div>
-                <p> Dados Profissionais</p>
+            <div class="formulario profissionais">
+                <p>Dados Profissionais</p>
                 <label>Natureza de Cargo</label><br>
                 <input type="radio" name="natureza_de_cargo" value="gerencia">Gerência
                 <input type="radio" name="natureza_de_cargo" value="financeiro">Financeiro
                 <input type="radio" name="natureza_de_cargo" value="recepcao">Recepção
                 <input type="radio" name="natureza_de_cargo" value="administrativo">Administrativo
-                <input type="radio" name="natureza_de_cargo" value="juridico">Jurídico
-                
-                <p>Área de interesse</p>
+                <br><input type="radio" name="natureza_de_cargo" value="juridico">Jurídico
+                <br>
+                <p>Área de interesse</p><br>
                 <input type="checkbox" value="computacao">Computação
                 <input type="checkbox" value="biologia">Biologia
                 <input type="checkbox" value="meioAmbiente">Meio Ambiente
                 <input type="checkbox" value="engenharia">Engenharia
-                <input type="checkbox" value="historia">História
+                <br><input type="checkbox" value="historia">História
                 <br><br>
                 <label>Mini-currículo</label><br>
                 <textarea name="curriculo" cols="30" rows="10" maxlength="300" onkeyup="limite_textarea(this.value)"></textarea><br>
                 <span id="cont">300</span> Caractéres Disponíveis<br>
             </div>
-            <input type="submit">
+            <button type="submit">Enviar</button>
             <button type="reset">Limpar</button>
         </form>
     </section>
-    <section class="formulario cadastro">
+    <section class="formularios tres">
         <form>
-            <div class="detalhesPessoais">
+            <div class="formulario funcionario">
                 <p>Cadastro de Funcionário</p>
                 <label>Nome: </label><input type="name"><br>
                 <label>Sobrenome: </label><input type="name"><br>
                 <label>Data de nascimento: </label><input type="date"><br>
-            </div>
-            <div class="detalhesProfissionais">
+            </div> <br>
+            <div class="formulario detalhes"> 
                 <p>Detalhes Profissionais</p>
                 <label>Departamento: </label> 
                 <select name="departamento" id="dep">
@@ -124,5 +129,6 @@
             </div>
         </form>
     </section>
+</section>
 </body>
 </html>
